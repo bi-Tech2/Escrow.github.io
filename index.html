@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecureBuy - #1 best escrow website</title>
+
+  <!-- 
+    - favicon link
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body id="top">
+
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="active" data-header>
+    <div class="container">
+  
+      <!-- overlay -->
+      <div class="overlay" data-overlay></div>
+  
+      <a href="index.html" class="logo">
+        <b style="background: linear-gradient(to right, #00dbde, #fc00ff); -webkit-background-clip: text; color: transparent;">SecureBuy</b>
+      </a>
+  
+      <button class="nav-toggle-btn" data-nav-toggle-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+  
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+  
+          <li class="navbar-item">
+            <a href="#home" class="navbar-link">Home</a>
+          </li>
+  
+          <li class="navbar-item">
+            <a href="services.html" class="navbar-link">Services</a>
+          </li>
+  
+          <li class="navbar-item dropdown">
+            <a target="_blank" class="navbar-link">Transactions</a>
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-link">Real Estate</a>
+              <a href="#" class="dropdown-link">Online Purchases</a>
+              <a href="#" class="dropdown-link">Business Transactions</a>
+            </div>
+          </li>
+  
+          <li class="navbar-item">
+            <a href="#fees" class="navbar-link">Fees</a>
+          </li>
+  
+          <li class="navbar-item">
+            <a href="#security" class="navbar-link">Security</a>
+          </li>
+  
+          <li class="navbar-item">
+            <a href="faq.html" class="navbar-link">FAQs</a>
+          </li>
+  
+          <li class="navbar-item">
+            <a href="ContactSection.html" class="navbar-link">Contact</a>
+          </li>
+  
+        </ul>
+  
+        <div class="navbar-actions">
+          <div class="dropdown">
+            <button class="btn">
+              <ion-icon name="person-circle-outline" style="font-size: 20px;"></ion-icon>
+              <span>User</span>
+            </button>
+            <div class="dropdown-content" style="left: 30px;">
+              <a href="#" class="dropdown-link">Profile</a>
+              <a href="#" class="dropdown-link">Settings</a>
+              <a href="#" class="dropdown-link">Logout</a>
+            </div>
+          </div>
+  
+        </div>
+      </nav>
+  
+    </div>
+  </header>
+  <style>
+    /* Dropdown styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff; /* Background color of the dropdown */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #333; /* Text color of dropdown links */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0; /* Background color on hover */
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+  </style>  
+
+
+
+
+
+  <main>
+    <article class="container">
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero " id="hero">
+
+        <div class="hero-content cox">
+          <h1>Secure Escrow for Trusted Transactions</h1>
+          <p>"Welcome to SecureBuy Escrow—your top priority for financial peace of mind. With unwavering commitment to transparency, reliability, and cutting-edge security, we're your trusted partner in secure transactions. Whether buying or selling, our advanced escrow ensures your funds are protected for smooth transactions. Join countless satisfied users who trust SecureBuy Escrow for confidence in their financial security."</p>
+           <br class="d">
+          <div class="hero-btn-group" style="margin-top: -5px;">
+      
+            <button class="btn btn-primary">
+              <ion-icon name="shield-checkmark"></ion-icon>
+              <span>Secure Now</span>
+            </button>
+      
+            <div class="btn-link-wrapper">
+              <p class="btn-title">Subscribe On:</p>
+              <a href="#" class="btn-link" style="color: #000000;">
+                <ion-icon name="logo-paypal"></ion-icon>
+                <span>PayPal</span>
+              </a>
+              <a href="#" class="btn-link" style="color: #000000;">
+                <ion-icon name="card-outline"></ion-icon>
+                <span>Visa</span>
+              </a>
+            </div>
+      
+          </div>
+      
+        </div>
+      
+        <div class="hero-banner"></div>
+      
+      </section>
+      <style>
+
+        .hero-content h1 {
+          font-size: 2.5em;
+          color: #333; /* Choose your desired color */
+          font-weight: bold;
+          margin-bottom: 20px;
+        }
+      
+        .hero-content p {
+          font-size: 1.2em;
+          color: #555; /* Choose your desired color */
+          line-height: 1.5;
+        }
+      </style>
+      
+
+
+
+
+      <!-- 
+        - #AI bot
+      -->
+      <div class="aibot brew ai active">
+        <div id="chat-icon" onclick="toggleChat()">
+          <img src="hero-img.png" alt="Chat Icon" style="width: 60; height: 60px;" class="ceb">
+        </div>
+        <div id="chat-window" style="display: none;" class="brew">
+          <div id="chat-header" style="display: flex; justify-content: space-between;">
+            <div class="name"><h5>SecureBuyAI</h5></div>
+            <span id="close-chat" onclick="toggleChat()">
+              <ion-icon name="close-outline"></ion-icon>
+            </span>
+          </div>
+          <div id="chat-messages"></div>
+          <div id="chat-input">
+            <input type="text" id="user-input" placeholder="Type your message..." required>
+            <button onclick="sendMessage()" class="weed">Send</button>
+          </div>
+        </div>
+      </div>
+
+<!-- 
+  - #AI bot    make this ai stuff appear at a point in the background, and let it disappear as soon as it reaches the footer
+-->
+
+<style>
+    .brew{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  }
+  .weed {
+  background: linear-gradient(to right, #00dbde, #fc00ff);
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.weed:hover {
+  background: linear-gradient(to right, #00c6c8, #e200e5);
+}
+
+  .aibot {
+
+  position: fixed;
+
+  bottom: 70px;
+  right: 20px;
+  z-index: 999;
+}
+
+#chat-icon {
+  cursor: pointer;
+}
+.ceb{
+  background: hsl(0, 0%, 0%);
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+#chat-window {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  color: #ddd;
+  margin-left: -25px;
+  width: 300px;
+  background-color: #000000;
+  border: 1px solid #000000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#chat-header {
+  background-color: linear-gradient(to right, #00dbde, #fc00ff);
+  padding: 10px;
+  text-align: right;
+}
+
+#close-chat {
+  cursor: pointer;
+}
+
+#chat-messages {
+  padding: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#chat-input {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#user-input {
+  flex: 1;
+  color: linear-gradient(to right, #00dbde, #fc00ff); -webkit-background-clip: text; color: transparent;
+  margin-right: 10px;
+}
+
+  /* ... (your existing styles) ... */
+
+  .typing::after {
+    content: '|';
+    display: inline-block;
+    animation: blink-caret 0.75s infinite;
+  }
+
+  @keyframes blink-caret {
+    50% {
+      opacity: 0;
+    }
+  }
+
+</style>
+
+<script>
+  function toggleChat() {
+    const chatWindow = document.getElementById('chat-window');
+    chatWindow.style.display = chatWindow.style.display === 'none' ? 'block' : 'none';
+  }
+
+  async function sendMessage() {
+    const userInput = document.getElementById('user-input');
+    const chatMessages = document.getElementById('chat-messages');
+
+    // Get user input and add it to the chat
+    const userMessage = userInput.value;
+    chatMessages.innerHTML += `<p><strong>You:</strong> ${userMessage}</p><br>`;
+
+    // Use your AI function here and add AI response to the chat with typing effect
+    const aiResponse = await getAIResponse(userMessage);
+    simulateTypingEffect(chatMessages, `BiTech:  ${aiResponse}`);
+
+    // Clear user input
+    userInput.value = '';
+  }
+
+  async function simulateTypingEffect(element, text) {
+    const delay = 50; // Adjust the typing speed (in milliseconds)
+    for (const char of text) {
+      await sleep(delay);
+      element.innerHTML += char;
+    }
+    // Remove the blinking caret after the typing effect is done
+  }
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  async function getAIResponse(userMessage) {
+    const lowerCaseUserMessage = userMessage.toLowerCase();
+    if (lowerCaseUserMessage.includes('hello') || lowerCaseUserMessage.includes('hi') || lowerCaseUserMessage.includes('hey') || lowerCaseUserMessage.includes('hola') || lowerCaseUserMessage.includes('yo')) {
+      return 'Hello! How can I assist you with our escrow services?';
+    } else if (lowerCaseUserMessage.includes('bye') || lowerCaseUserMessage.includes('goodbye') || lowerCaseUserMessage.includes('bye bye') || lowerCaseUserMessage.includes('see ya') || lowerCaseUserMessage.includes('take care')) {
+      return 'Goodbye! If you need further assistance, feel free to reach out.';
+    } else if (lowerCaseUserMessage.includes('Where can I initiate an escrow transaction?') || lowerCaseUserMessage.includes('how can I initiate an escrow transaction?') || lowerCaseUserMessage.includes('how can I make a transaction?') || lowerCaseUserMessage.includes('where can I can transaction?')) {
+      return 'Where and how can I initiate an escrow transaction?';
+    } else if (lowerCaseUserMessage.includes('tf') || lowerCaseUserMessage.includes('wtf') || lowerCaseUserMessage.includes('fuck') || lowerCaseUserMessage.includes('nude') || lowerCaseUserMessage.includes('xxx') || lowerCaseUserMessage.includes('sex') || lowerCaseUserMessage.includes('hoe') || lowerCaseUserMessage.includes('nigga') || lowerCaseUserMessage.includes('puke') || lowerCaseUserMessage.includes('dick') || lowerCaseUserMessage.includes('pussy')) {
+      return "I'm sorry, I'm not sure I understand. Could you please clarify your question regarding our escrow services?";
+    } else if (lowerCaseUserMessage.includes('What are the payment options') || lowerCaseUserMessage.includes('are there any associated fees for using our escrow services?') || lowerCaseUserMessage.includes('can i make a transfer?') || lowerCaseUserMessage.includes('can i pay using bitcoin?')) {
+      return 'What are the payment options available, and are there any associated fees for using our escrow services?';
+    } else if (lowerCaseUserMessage.includes('security') || lowerCaseUserMessage.includes('safety')) {
+      return 'How secure is the escrow process, and what measures are in place to ensure the safety of transactions?';
+    } else if (lowerCaseUserMessage.includes('cancel') || lowerCaseUserMessage.includes('refund')) {
+      return 'What is the process for canceling an escrow transaction or requesting a refund?';
+    } else if (lowerCaseUserMessage.includes('verification') || lowerCaseUserMessage.includes('account')) {
+      return 'Is account verification required, and what steps are involved in verifying my escrow account?';
+    } else if (lowerCaseUserMessage.includes('time') || lowerCaseUserMessage.includes('duration')) {
+      return 'How long does the escrow process typically take, and are there any factors that may affect the duration?';
+    } else if (lowerCaseUserMessage.includes('contact') || lowerCaseUserMessage.includes('support')) {
+      return 'How can I contact customer support for assistance with my escrow-related inquiries?';
+    } else {
+      return "I'm sorry, I can't help you with: " + userMessage + ". If you have escrow-related questions, feel free to ask.";
+    }
+  }
+
+
+  // async function getAIResponse(userMessage) {
+  //   // Check for specific user inputs and return corresponding responses
+  //   const lowerCaseUserMessage = userMessage.toLowerCase();
+  //   if (lowerCaseUserMessage.includes("work") || lowerCaseUserMessage.includes('help')) {
+  //     return 'with what?';
+  //   } else if (lowerCaseUserMessage.includes('love') || lowerCaseUserMessage.includes('hate')) {
+  //     return 'Alaye I no get feelings!';
+  //   } else {
+  //     return 'I no know wetin be: ' + userMessage;
+  //   }
+  // }
+</script>
+
+      
+
+      </div>
+      <!-- 
+        - #AI bot end
+      -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!-- 
+        - #NEWSLETTER
+      -->
+
+      <section class="newsletter">
+        <div class="newsletter-card">
+
+          <div class="card-content">
+            <h3 class="h3 card-title">Sign Up For Our Newsletter. It’s Free!</h3>
+
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit tincidunt todeiy felis malesuada mollis purus id
+              sit in aliquet.
+            </p>
+          </div>
+
+          <form action="" class="card-form" data-form>
+            <input type="email" name="email_address" placeholder="Your Email Address" required class="input-field"
+              data-input>
+
+            <button type="submit" class="btn btn-primary" disabled data-submit>Subscribe</button>
+          </form>
+
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+
+
+
+
+<!-- 
+  - #FOOTER
+-->
+
+<footer>
+
+  <div class="footer-top">
+    <div class="container">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <b style="background: linear-gradient(to right, #00dbde, #fc00ff); -webkit-background-clip: text; color: transparent;">SecureBuy</b>
+        </a>
+
+        <p class="footer-text">
+          Your trusted partner for secure transactions. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt in felis malesuada, mollis purus id, sit in aliquet lectus eget morbi dui felis malesuada.
+        </p>
+      </div>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="footer-link-title">Navigation</p>
+        </li>
+      
+        <li>
+          <a href="index.html" class="footer-link">Home</a>
+        </li>
+      
+        <li>
+          <a href="about.html" class="footer-link">About</a>
+        </li>
+      
+        <li>
+          <a href="ContactSection.html" class="footer-link">Contact</a>
+        </li>
+      
+        <li>
+          <a href="#get-started" class="footer-link">Get Started</a>
+        </li>
+      
+        <li>
+          <a href="#transactions" class="footer-link">Transactions</a>
+        </li>
+      
+        <li>
+          <a href="#funds" class="footer-link">Funds</a>
+        </li>
+
+      </ul>
+<!-- Additional Links -->
+<ul class="footer-list">
+
+  <li>
+    <p class="footer-link-title">Useful Links</p>
+  </li>
+
+  <li>
+    <a href="privacy.html" class="footer-link">Privacy Policy</a>
+  </li>
+
+  <li>
+    <a href="terms.html" class="footer-link">Terms of Service</a>
+  </li>
+
+  <li>
+    <a href="refund.html" class="footer-link">Refund Policy</a>
+  </li>
+
+  <!-- <li>
+    <a href="disclaimer.html" class="footer-link">Disclaimer</a>
+  </li> -->
+
+  <li>
+    <a href="faqs.html" class="footer-link">FAQs</a>
+  </li>
+
+  <li>
+    <a href="support.html" class="footer-link">Support Center</a>
+  </li>
+
+  <li>
+    <a href="helpdesk.html" class="footer-link">Help Desk</a>
+  </li>
+
+</ul>
+
+<!-- Social Links -->
+<ul class="footer-list">
+
+  <li>
+    <p class="footer-link-title">Connect With Us</p>
+  </li>
+
+  <li>
+    <a href="customer-service.html" class="footer-link">Customer Service</a>
+  </li>
+
+  <li>
+    <a href="linkedin.com/company/securebuy" class="footer-link">LinkedIn</a>
+  </li>
+
+  <li>
+    <a href="youtube.com/securebuy" class="footer-link">YouTube</a>
+  </li>
+
+  <!-- <li>
+    <a href="pinterest.com/securebuy" class="footer-link">Pinterest</a>
+  </li> -->
+
+  <li>
+    <a href="partner-program.html" class="footer-link">Partner Program</a>
+  </li>
+
+  <li>
+    <a href="affiliate.html" class="footer-link">Become an Affiliate</a>
+  </li>
+
+  <li>
+    <a href="subscribe.html" class="footer-link">Subscribe to Newsletter</a>
+  </li>
+
+</ul>
+
+      
+
+      <div class="social-list-box">
+
+        <p class="social-title">Follow Us On:</p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="https://www.facebook.com/securebuy" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://twitter.com/securebuy" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/securebuy" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://soundcloud.com/securebuy" class="social-link">
+              <ion-icon name="logo-soundcloud"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-apple"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p class="copyright">
+        &copy; 2024 <a href="https://bi-tech2.github.io/JoshDickson.github.io/">BiTech</a>. All Rights Reserved
+      </p>
+    </div>
+  </div>
+
+</footer>
+
+
+
+
+
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top" data-go-top>
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

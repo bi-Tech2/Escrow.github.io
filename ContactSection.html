@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Section</title>
+  <meta name="title" content="greenimmortality">
+  <meta name="description" content="Green Immortality is your premier destination for handpicked garden-related products. Based in The United Kingdom, our website showcases a curated selection of items designed to elevate your gardening experience. Explore our offerings through Amazon affiliate product links, and transform your green spaces into thriving sanctuaries.">
+
+  <link rel="icon" href="logof.png" type="image/x-icon" class="ict">
+  <link rel="stylesheet" href="samp.css">
+    <!-- Favicon -->
+    <link rel="icon" href="logof.png" type="image/x-icon" class="ict">
+
+    <!-- Link To Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;0,500;0,600;0,800;1,900&display=swap" rel="stylesheet">
+
+    <!-- Link To CSS Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="Project Files/style.css">
+
+    <!-- Font Awesome Icons Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+
+    <!-- EmailJS Library Link -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+    <!-- EmailJS Configuration -->
+    <script>
+        emailjs.init("x1eU8Vi3QY3kZlkds");
+    </script>
+	
+    <!-- Custom Scrollbar Style -->
+    <style>
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color:hsl(346, 100%, 58%) ;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <main class="row">
+            <!-- Left Section (Column) Starts -->
+            <section class="col left">
+                <!-- Title Starts -->
+                <div class="contactTitle">
+                    <h2>Get In Touch</h2>
+                    <p></p>
+                </div>
+                <!-- Title Ends -->
+
+                <!-- Contact Info Starts -->
+                <div class="contactInfo">
+                    <div class="iconGroup">
+                        <div class="icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="details">
+                            <span>Phone</span>
+                            <span>+44 7723774747</span>
+                        </div>
+                    </div>
+
+                    <div class="iconGroup">
+                        <div class="icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="details">
+                            <span>Email</span>
+                            <span>greenimmortality@2.com</span>
+                        </div>
+                    </div>
+
+                    <div class="iconGroup">
+                        <div class="icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="details">
+                            <span>Location</span>
+                            <span>88 Hungerhill Road, 
+                                <br> Nottingham, United </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Contact Info Ends -->
+
+                <!-- Social Media Starts -->
+                <div class="socialMedia">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <!-- Social Media Ends -->
+            </section>
+            <!-- Left Section (Column) Ends -->
+
+            <!-- Right Section (Column) Starts -->
+            <section class="col right">
+                <!-- Form Starts -->
+                <form class="messageForm" id="contactForm">
+                    <div class="inputGroup halfWidth">
+                        <input type="text" name="name" required>
+                        <label>Your Name</label>
+                    </div>
+
+                    <div class="inputGroup halfWidth">
+                        <input type="email" name="email" required>
+                        <label>Email</label>
+                    </div>
+
+                    <div class="inputGroup fullWidth">
+                        <input type="text" name="subject" required>
+                        <label>Subject</label>
+                    </div>
+
+                    <div class="inputGroup fullWidth">
+                        <textarea name="message" required></textarea>
+                        <label>Your Message</label>
+                    </div>
+
+                    <div class="inputGroup fullWidth">
+                        <button type="button" onclick="sendEmail()">Send Message</button>
+                    </div>
+                </form>
+                <!-- Form Ends -->
+            </section>
+            <!-- Right Section (Column) Ends -->
+        </main>
+    </div>
+    <style>
+        ::selection{
+          background-color: hsl(346, 100%, 58%);
+        }
+      </style>
+    <!-- Go Home Button -->
+    <div class="mainn" style="z-index: 1; display: flex; width: 100%; justify-content: left; position: absolute; margin-top: -40px; padding-left: 30px; padding-bottom: 20px;">
+        <div class="inputGroup fullWidth">
+            <button type="button"><a href="index.html" style="text-decoration: none;" class="wolf">Go Home</a></button>
+        </div>
+    </div>
+
+    <!-- JavaScript for EmailJS Integration -->
+    <script>
+        function sendEmail() {
+            emailjs.send("service_w6hedwi", "template_usb6k2q", {
+                from_name: document.getElementById("contactForm").elements["name"].value,
+                from_email: document.getElementById("contactForm").elements["email"].value,
+                message: document.getElementById("contactForm").elements["message"].value
+            }).then(
+                function(response) {
+                    console.log("sent successfully", response);
+                    alert("Sent successfully!");
+                },
+                function(error) {
+                    console.log("failed to send", error);
+                    alert("Failed to send. Please try again later.");
+                }
+            );
+        }
+    </script>
+</body>
+</html>
