@@ -1,7 +1,10 @@
 /*-----------------------------------*\
   #style.css
 \*-----------------------------------*/
-
+::selection {
+  background-color: var(--dark-violet);
+  color: var(--white);
+}
 /**
  * copyright 2022 @codewithsadee
  */
@@ -29,6 +32,9 @@
   --white: hsl(0, 0%, 100%);
 
   --gradient: linear-gradient(to right, var(--flourescent-blue), var(--blue-ryb));
+  
+
+
 
   /**
    * typography
@@ -103,7 +109,8 @@ html {
   scroll-behavior: smooth;
 }
 
-footer {
+footer,
+ .gem{
   z-index: 2000;
   background: var(--dark-violet);
   color: var(--white);
@@ -869,11 +876,20 @@ header .container {
 
 }
 
-
-
-.cox{
-  margin-top: -170px;
+.hero-content {
+  margin-top: -180px; /* Adjust this value based on your needs */
+  transition: margin-top 0.5s ease; /* Add smooth transition */
 }
+
+@media screen and (max-width: 1200px) {
+  .hero-content {
+      margin-top: 0; /* Reset margin to normal for screens up to 960px */
+  }
+}
+
+/* .cox{
+  margin-top: -170px;
+} */
 
 /**
  * responsive for larger than 1200px
@@ -951,7 +967,7 @@ header .container {
     display: block;
     width: 100%;
     padding-top: 100%;
-    background: url("../images/hero.png") no-repeat;
+    background: url("../images/about-banner-2.png") no-repeat;
     background-size: cover;
     border-radius: 100px;
   }

@@ -16,6 +16,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="ai.css">
 
   <!-- 
     - google font link
@@ -140,6 +141,7 @@
 
 
   <main>
+  <div class="raw gem">
     <article class="container">
 
       <!-- 
@@ -161,11 +163,11 @@
       
             <div class="btn-link-wrapper">
               <p class="btn-title">Subscribe On:</p>
-              <a href="#" class="btn-link" style="color: #000000;">
+              <a href="#" class="btn-link" style="color: #f4f4f4;">
                 <ion-icon name="logo-paypal"></ion-icon>
                 <span>PayPal</span>
               </a>
-              <a href="#" class="btn-link" style="color: #000000;">
+              <a href="#" class="btn-link" style="color: #ffffff;">
                 <ion-icon name="card-outline"></ion-icon>
                 <span>Visa</span>
               </a>
@@ -178,18 +180,20 @@
         <div class="hero-banner"></div>
       
       </section>
+    </article>
+  </div>
       <style>
 
         .hero-content h1 {
           font-size: 2.5em;
-          color: #333; /* Choose your desired color */
+          color: #f8f8f8; /* Choose your desired color */
           font-weight: bold;
           margin-bottom: 20px;
         }
       
         .hero-content p {
           font-size: 1.2em;
-          color: #555; /* Choose your desired color */
+          color: #a8a8a8; /* Choose your desired color */
           line-height: 1.5;
         }
       </style>
@@ -201,7 +205,7 @@
       <!-- 
         - #AI bot
       -->
-      <div class="aibot brew ai active">
+      <div id="aibot-container" class="aibot brew ai active">
         <div id="chat-icon" onclick="toggleChat()">
           <img src="hero-img.png" alt="Chat Icon" style="width: 60; height: 60px;" class="ceb">
         </div>
@@ -219,193 +223,172 @@
           </div>
         </div>
       </div>
-
-<!-- 
-  - #AI bot    make this ai stuff appear at a point in the background, and let it disappear as soon as it reaches the footer
--->
-
-<style>
-    .brew{
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
-  }
-  .weed {
-  background: linear-gradient(to right, #00dbde, #fc00ff);
-  padding: 5px;
-  border-radius: 4px;
-}
-
-.weed:hover {
-  background: linear-gradient(to right, #00c6c8, #e200e5);
-}
-
-  .aibot {
-
-  position: fixed;
-
-  bottom: 70px;
-  right: 20px;
-  z-index: 999;
-}
-
-#chat-icon {
-  cursor: pointer;
-}
-.ceb{
-  background: hsl(0, 0%, 0%);
-  color: #fff;
-  border-radius: 10px;
-  padding: 10px;
-}
-#chat-window {
-  position: absolute;
-  bottom: 50px;
-  right: 0;
-  color: #ddd;
-  margin-left: -25px;
-  width: 300px;
-  background-color: #000000;
-  border: 1px solid #000000;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#chat-header {
-  background-color: linear-gradient(to right, #00dbde, #fc00ff);
-  padding: 10px;
-  text-align: right;
-}
-
-#close-chat {
-  cursor: pointer;
-}
-
-#chat-messages {
-  padding: 10px;
-  max-height: 200px;
-  overflow-y: auto;
-}
-
-#chat-input {
-  padding: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
-#user-input {
-  flex: 1;
-  color: linear-gradient(to right, #00dbde, #fc00ff); -webkit-background-clip: text; color: transparent;
-  margin-right: 10px;
-}
-
-  /* ... (your existing styles) ... */
-
-  .typing::after {
-    content: '|';
-    display: inline-block;
-    animation: blink-caret 0.75s infinite;
-  }
-
-  @keyframes blink-caret {
-    50% {
-      opacity: 0;
-    }
-  }
-
-</style>
-
-<script>
-  function toggleChat() {
-    const chatWindow = document.getElementById('chat-window');
-    chatWindow.style.display = chatWindow.style.display === 'none' ? 'block' : 'none';
-  }
-
-  async function sendMessage() {
-    const userInput = document.getElementById('user-input');
-    const chatMessages = document.getElementById('chat-messages');
-
-    // Get user input and add it to the chat
-    const userMessage = userInput.value;
-    chatMessages.innerHTML += `<p><strong>You:</strong> ${userMessage}</p><br>`;
-
-    // Use your AI function here and add AI response to the chat with typing effect
-    const aiResponse = await getAIResponse(userMessage);
-    simulateTypingEffect(chatMessages, `BiTech:  ${aiResponse}`);
-
-    // Clear user input
-    userInput.value = '';
-  }
-
-  async function simulateTypingEffect(element, text) {
-    const delay = 50; // Adjust the typing speed (in milliseconds)
-    for (const char of text) {
-      await sleep(delay);
-      element.innerHTML += char;
-    }
-    // Remove the blinking caret after the typing effect is done
-  }
-
-  function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-
-  async function getAIResponse(userMessage) {
-    const lowerCaseUserMessage = userMessage.toLowerCase();
-    if (lowerCaseUserMessage.includes('hello') || lowerCaseUserMessage.includes('hi') || lowerCaseUserMessage.includes('hey') || lowerCaseUserMessage.includes('hola') || lowerCaseUserMessage.includes('yo')) {
-      return 'Hello! How can I assist you with our escrow services?';
-    } else if (lowerCaseUserMessage.includes('bye') || lowerCaseUserMessage.includes('goodbye') || lowerCaseUserMessage.includes('bye bye') || lowerCaseUserMessage.includes('see ya') || lowerCaseUserMessage.includes('take care')) {
-      return 'Goodbye! If you need further assistance, feel free to reach out.';
-    } else if (lowerCaseUserMessage.includes('Where can I initiate an escrow transaction?') || lowerCaseUserMessage.includes('how can I initiate an escrow transaction?') || lowerCaseUserMessage.includes('how can I make a transaction?') || lowerCaseUserMessage.includes('where can I can transaction?')) {
-      return 'Where and how can I initiate an escrow transaction?';
-    } else if (lowerCaseUserMessage.includes('tf') || lowerCaseUserMessage.includes('wtf') || lowerCaseUserMessage.includes('fuck') || lowerCaseUserMessage.includes('nude') || lowerCaseUserMessage.includes('xxx') || lowerCaseUserMessage.includes('sex') || lowerCaseUserMessage.includes('hoe') || lowerCaseUserMessage.includes('nigga') || lowerCaseUserMessage.includes('puke') || lowerCaseUserMessage.includes('dick') || lowerCaseUserMessage.includes('pussy')) {
-      return "I'm sorry, I'm not sure I understand. Could you please clarify your question regarding our escrow services?";
-    } else if (lowerCaseUserMessage.includes('What are the payment options') || lowerCaseUserMessage.includes('are there any associated fees for using our escrow services?') || lowerCaseUserMessage.includes('can i make a transfer?') || lowerCaseUserMessage.includes('can i pay using bitcoin?')) {
-      return 'What are the payment options available, and are there any associated fees for using our escrow services?';
-    } else if (lowerCaseUserMessage.includes('security') || lowerCaseUserMessage.includes('safety')) {
-      return 'How secure is the escrow process, and what measures are in place to ensure the safety of transactions?';
-    } else if (lowerCaseUserMessage.includes('cancel') || lowerCaseUserMessage.includes('refund')) {
-      return 'What is the process for canceling an escrow transaction or requesting a refund?';
-    } else if (lowerCaseUserMessage.includes('verification') || lowerCaseUserMessage.includes('account')) {
-      return 'Is account verification required, and what steps are involved in verifying my escrow account?';
-    } else if (lowerCaseUserMessage.includes('time') || lowerCaseUserMessage.includes('duration')) {
-      return 'How long does the escrow process typically take, and are there any factors that may affect the duration?';
-    } else if (lowerCaseUserMessage.includes('contact') || lowerCaseUserMessage.includes('support')) {
-      return 'How can I contact customer support for assistance with my escrow-related inquiries?';
-    } else {
-      return "I'm sorry, I can't help you with: " + userMessage + ". If you have escrow-related questions, feel free to ask.";
-    }
-  }
-
-
-  // async function getAIResponse(userMessage) {
-  //   // Check for specific user inputs and return corresponding responses
-  //   const lowerCaseUserMessage = userMessage.toLowerCase();
-  //   if (lowerCaseUserMessage.includes("work") || lowerCaseUserMessage.includes('help')) {
-  //     return 'with what?';
-  //   } else if (lowerCaseUserMessage.includes('love') || lowerCaseUserMessage.includes('hate')) {
-  //     return 'Alaye I no get feelings!';
-  //   } else {
-  //     return 'I no know wetin be: ' + userMessage;
-  //   }
-  // }
-</script>
-
-      
-
       </div>
       <!-- 
         - #AI bot end
       -->
 
+    
+
+      <!-- 
+        - #ABOUT
+      -->
+
+      <section class="ex about" id="about" aria-label="about">
+        <div class="tainer">
+
+          <figure class="about-banner">
+            <img src="about-banner.png" width="62px" height="57px" loading="lazy" alt="about banner"
+              class="w-100">
+          </figure>
+
+          <div class="about-content">
+
+            <p class="section-subtitle">Our Acquaintance</p>
+
+            <h2 class="h2 section-title">We Are Trusted By Thousands Of People</h2>
+
+            <p class="section-text">
+              Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Ut elit tellus, luc tus nec ullamcorper mattis,
+              pulvinar
+              dapibus leo. Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Ut elit tellus, luc tus nec ullam
+              corpe
+            </p>
+
+            <ul class="about-list">
+
+              <li class="about-item">
+
+                <div class="item-icon">
+                  <ion-icon name="folder" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="h3 item-title">Device Quality Design</h3>
+
+                  <p class="item-text">
+                    Lorem ipsum dolor sit amet, consec tetur adipiscing elit Lorem ipsum dolor sit amet, consec tetur
+                    adipiscing elit.
+                  </p>
+                </div>
+
+              </li>
+
+              <li class="about-item">
+
+                <div class="item-icon">
+                  <ion-icon name="pie-chart" aria-hidden="true"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="h3 item-title">Easy to Manage Data</h3>
+
+                  <p class="item-text">
+                    Lorem ipsum dolor sit amet, consec tetur adipiscing elit Lorem ipsum dolor sit amet, consec tetur
+                    adipiscing elit.
+                  </p>
+                </div>
+
+              </li>
+
+            </ul>
+
+            <a href="#" class="btn btn-secondary">Discover More</a>
+
+          </div>
+
+        </div>
+      </section>
 
 
 
 
 
+      <!-- 
+        - #ABOUT 2
+      -->
+
+      <section class="section about-2" aria-label="about">
+        <div class="container">
+
+          <div class="about-content">
+
+            <p class="section-subtitle">Cool & Amazing Design</p>
+
+            <h2 class="h2 section-title">We Develop Amazing App For Startups</h2>
+
+            <p class="section-text">
+              Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Ut elit tellus, luc tus nec ullamcorper mattis,
+              pulvinar
+              dapibus leo. Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Ut elit tellus, luc tus nec ullam
+              corper.
+            </p>
+
+            <p class="section-text">
+              Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Ut elit tellus, luc tus nec ullamcorper mattis,
+              pulvinar
+              dapibus leo. Lorem ipsum dolor.
+            </p>
+
+            <a href="#" class="btn btn-secondary">Discover More</a>
+
+          </div>
+
+          <figure class="about-banner">
+            <img src="about-banner-2.png" width="1146" height="1226" loading="lazy" alt="about banner"
+              class="w-100">
+          </figure>
+
+        </div>
+      </section>
 
 
 
 
+
+            <!-- 
+        - #APP
+      -->
+
+      <section class="section app" aria-label="app" id="app">
+        <div class="container">
+
+          <figure class="app-banner">
+            <img src="app.png" width="449" height="608" loading="lazy" alt="app banner" class="w-100">
+          </figure>
+
+          <div class="app-content">
+
+            <p class="section-subtitle">Download Our App</p>
+
+            <h2 class="h2 section-title">Get The App For Free And Start Now</h2>
+
+            <p class="section-text">
+              Lorem ipsum dolor sit amet, consec tetur adipiscing elit. Ut elit tellus, luc tus nec ullamcorper mattis,
+              pulvinar
+              dapibus leo. Lorem ipsum dolor sit amet con Lorem ipsum dolor
+            </p>
+
+            <ul class="btn-list">
+
+              <li>
+                <a href="#" class="btn-item-link" aria-label="Download from app store">
+                  <img src="app-store.png" width="185" height="69" alt="app store" class="img">
+                </a>
+              </li>
+
+              <li>
+                <a href="#" class="btn-item-link" aria-label="Download from play store">
+                  <img src="play-store.png" width="185" height="69" alt="play store" class="img">
+                </a>
+              </li>
+
+            </ul>
+
+          </div>
+
+        </div>
+      </section>
 
 
 
@@ -417,7 +400,7 @@
         - #NEWSLETTER
       -->
 
-      <section class="newsletter">
+      <section class="newsletter container">
         <div class="newsletter-card">
 
           <div class="card-content">
@@ -439,7 +422,7 @@
         </div>
       </section>
 
-    </article>
+
   </main>
 
 
@@ -652,6 +635,7 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="ai.js"></script>
 
 </body>
 

@@ -1,0 +1,153 @@
+  #aibot-container {
+  position: fixed; /* Fix the AI bot to the viewport */
+  bottom: 60px; /* Adjust the distance from the bottom as needed */
+  right: 20px; /* Adjust the distance from the right as needed */
+  transition: opacity 0.5s; /* Add a smooth transition for the appearance/disappearance */
+  opacity: 1; /* Initial opacity, adjust as needed */
+}
+
+#aibot-container.hidden {
+  box-shadow: 0px 0px 10px rgb(56, 56, 56);
+  opacity: 0; /* Set opacity to 0 when hidden */
+  pointer-events: none; /* Disable pointer events when hidden */
+}
+
+.brew{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0px 0px 10px rgb(56, 56, 56);
+  }
+  .weed {
+  background: linear-gradient(to right, #00dbde, #fc00ff);
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.weed:hover {
+  background: linear-gradient(to right, #00c6c8, #e200e5);
+}
+
+  .aibot {
+
+  position: fixed;
+
+  bottom: 70px;
+  right: 20px;
+  z-index: 999;
+}
+
+#chat-icon {
+  cursor: pointer;
+}
+.ceb{
+  background: hsl(0, 0%, 0%);
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+#chat-window {
+  position: absolute;
+  bottom: 50px;
+  right: 0;
+  color: #ddd;
+  margin-left: -25px;
+  width: 300px;
+  background-color: #000000;
+  border: 1px solid #000000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#chat-header {
+  background-color: linear-gradient(to right, #00dbde, #fc00ff);
+  padding: 10px;
+  text-align: right;
+}
+
+#close-chat {
+  cursor: pointer;
+}
+
+#chat-messages {
+  padding: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+#chat-input {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#user-input {
+  flex: 1;
+  color: linear-gradient(to right, #00dbde, #fc00ff); -webkit-background-clip: text; color: transparent;
+  margin-right: 10px;
+}
+
+  /* ... (your existing styles) ... */
+
+  .typing::after {
+    content: '|';
+    display: inline-block;
+    animation: blink-caret 0.75s infinite;
+  }
+
+  @keyframes blink-caret {
+    50% {
+      opacity: 0;
+    }
+  }
+
+
+
+
+      /* Media query for 1020px */
+      @media screen and (max-width: 1020px) {
+        .navbar-item.dropdown {
+          position: relative;
+        }
+  
+        .navbar-item.dropdown .dropdown-content {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          z-index: 1;
+        }
+  
+        .navbar-item.dropdown.active .dropdown-content {
+          display: block;
+        }
+  
+        .navbar-item.dropdown.active .navbar-link::after {
+          content: " ▲";
+        }
+  
+        .navbar-item.dropdown .navbar-link::after {
+          content: " ▼";
+        }
+  
+        .navbar-item.dropdown.active .navbar-link::after,
+        .navbar-item.dropdown:hover .navbar-link::after {
+          content: " ▲";
+        }
+  
+        .navbar-actions .dropdown {
+          position: relative;
+        }
+  
+        .navbar-actions .dropdown .dropdown-content {
+          display: none;
+          position: absolute;
+          bottom: 100%;
+          left: 0;
+          z-index: 1;
+        }
+  
+        .navbar-actions .dropdown.active .dropdown-content {
+          display: block;
+        }
+      }
