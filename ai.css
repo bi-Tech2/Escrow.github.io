@@ -11,6 +11,45 @@
   opacity: 0; /* Set opacity to 0 when hidden */
   pointer-events: none; /* Disable pointer events when hidden */
 }
+.fed{
+  
+}
+.web {
+  gap: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between; /* Set to space-between as per your request */
+}
+
+@media screen and (max-width: 1024px) {
+  .web {
+    gap: 100px;
+    display: flex;
+    flex-direction: column-reverse; /* Reverse the order when in flexbox */
+    align-items: center;
+    justify-content: center;
+  }
+}
+.wab {
+  gap: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between; /* Set to space-between as per your request */
+}
+
+@media screen and (max-width: 1024px) {
+  .wab {
+    display: block;
+  }
+  .dev{
+    display: none;
+  }
+  .der{
+    margin-top: -70px;
+  }
+}
 
 .brew{
   border-top-left-radius: 10px;
