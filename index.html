@@ -307,7 +307,44 @@
       <!-- 
         - #ABOUT 2
       -->
+<style>
+  
+  /* .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    } */
 
+    /* Responsive styles for tablets */
+    @media only screen and (max-width: 768px) {
+      /* .container {
+        padding: 10px;
+      } */
+
+      .about-banner img,
+      .app-banner img {
+        width: 100%;
+        height: auto;
+      }
+
+      .about-2 {
+        flex-direction: column-reverse;
+      }
+    }
+
+    /* Responsive styles for mobile */
+    @media only screen and (max-width: 480px) {
+      /* .container {
+        padding: 5px;
+      } */
+
+      .about-banner img,
+      .app-banner img {
+        width: 100%;
+        height: auto;
+      }
+    }
+</style>
       <section class="section about-2" aria-label="about">
         <div class="container wab">
 
@@ -354,7 +391,7 @@
         <div class="container">
 
           <figure class="app-banner">
-            <img src="app.png" width="449" height="608" loading="lazy" alt="app banner" class="w-100">
+            <img src="" width="449" height="608" loading="lazy" alt="app banner" class="w-100">
           </figure>
 
           <div class="app-content">
