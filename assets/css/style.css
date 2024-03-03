@@ -29,7 +29,7 @@
   --dark-violet: hsl(252, 100%, 12%);
   --space-cadet: hsl(247, 43%, 20%);
   --blue-ryb: hsl(221, 100%, 50%);
-  --white: hsl(0, 0%, 100%);
+  --white: hsl(0, 0%, 96%);
 
   --gradient: linear-gradient(to right, var(--flourescent-blue), var(--blue-ryb));
   
@@ -115,7 +115,9 @@ footer,
   background: var(--dark-violet);
   color: var(--white);
 }
-
+.app{
+  background: linear-gradient(to right, #00dbde, #fc00ff);
+}
 ::-webkit-scrollbar { width: 10px; }
 
 ::-webkit-scrollbar-track {

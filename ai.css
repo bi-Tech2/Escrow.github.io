@@ -7,12 +7,42 @@
 }
 
 #aibot-container.hidden {
-  box-shadow: 0px 0px 10px rgb(56, 56, 56);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.886);
   opacity: 0; /* Set opacity to 0 when hidden */
   pointer-events: none; /* Disable pointer events when hidden */
 }
+.app{
+  display: flex;
+  gap: 7rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.appp{
+  display: flex;
+  background: transparent;
+  gap: 1rem;
+  margin-top: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+}
 .fed{
-  
+  line-height: 1.2;
+  color: rgb(72, 72, 72);
+}
+.fav{
+  font-size: 2rem;
+  color: rgba(255, 94, 0, 0.82);
+  margin-top: 10px;
+  margin-left: 10px;
+}
+.deb{
+  background: linear-gradient(to right, #00acaf, #ad00b0); -webkit-background-clip: text; color: transparent;
+}
+.weird{
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 2.3rem;
+  color: hsl(252, 100%, 12%);
 }
 .web {
   gap: 70px;
@@ -21,7 +51,15 @@
   justify-content: center;
   justify-content: space-between; /* Set to space-between as per your request */
 }
-
+@media screen and (max-width: 456px) {
+  .appp{
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    
+  }
+}
 @media screen and (max-width: 1024px) {
   .web {
     gap: 100px;
@@ -40,6 +78,10 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .app{
+    align-items: center;
+    flex-wrap: wrap;
+  }
   .wab {
     display: block;
   }
@@ -54,9 +96,9 @@
 .brew{
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  box-shadow: 0px 0px 3px black;
   border-bottom-left-radius: 10px;
-  box-shadow: 0px 0px 10px rgb(56, 56, 56);
-  }
+}
   .weed {
   background: linear-gradient(to right, #00dbde, #fc00ff);
   padding: 5px;
@@ -80,7 +122,7 @@
   cursor: pointer;
 }
 .ceb{
-  background: hsl(0, 0%, 0%);
+  background: hsl(252, 100%, 12%);
   color: #fff;
   border-radius: 10px;
   padding: 10px;
@@ -92,8 +134,7 @@
   color: #ddd;
   margin-left: -25px;
   width: 300px;
-  background-color: #000000;
-  border: 1px solid #000000;
+  background-color: hsl(252, 100%, 12%);;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
