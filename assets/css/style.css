@@ -67,6 +67,58 @@
 
 
 
+/*-----------------------------------*\
+  #TESTIMONIES
+\*-----------------------------------*/
+.w{
+  margin-left: 50px;
+}
+.testimonials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Adjust spacing between cards */
+  margin: 20px;
+}
+.dex{
+  margin-top: 70px;
+  font-size: var(--fs-1);
+  margin-bottom: 50px;
+  font-family: var(--ff-josefin);
+  background: linear-gradient(to right, #00dbde, #fc00ff); -webkit-background-clip: text; color: transparent;
+}
+.testimonial {
+  width: 300px; /* Adjust card width as needed */
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: grab; /* Initial cursor style */
+  position: relative; /* Required for grabbing functionality */
+}
+
+.testimonial img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.testimonial h2,
+.testimonial p {
+  margin: 5px 0;
+}
+
+.testimonial:active {
+  cursor: grabbing; /* Cursor style when grabbing */
+}
+
+.grabable {
+  /* Additional styles for grabbing functionality */
+  z-index: 1; /* Ensure grabbed card stays on top */
+}
+
 
 /*-----------------------------------*\
   #RESET
@@ -115,7 +167,15 @@ footer,
   background: var(--dark-violet);
   color: var(--white);
 }
-.app{
+.darc{
+  box-shadow: 0 0 4px #131414;
+  padding: 20px;
+  max-width: 400px;
+  height: 300px;
+  border-radius: 10px;
+}
+.app,
+.darc{
   background: linear-gradient(to right, #00dbde, #fc00ff);
 }
 ::-webkit-scrollbar { width: 10px; }
@@ -613,10 +673,31 @@ header .container {
 }
 
 .go-top:is(:hover, :focus) { --blue-ryb: hsl(221, 100%, 40%); }
-
-
-
-
+.darc h1{
+  font-size: 1.3rem;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  color: #f5f5f5;
+}
+.darc p{
+  color: rgba(0, 0, 0, 0.749);
+}
+/* .rew{
+  background-color: #fc00ff;
+} */
+.wor{
+  display: flex; justify-content: space-between;justify-content: space-evenly; flex-wrap:initial;text-align: center;align-items: center;
+}
+/* @media (max-width: 500px) {
+  .wor{
+      grid-template-columns: 1fr 1fr; 
+  }
+} */
+@media (max-width: 1020px) {
+  .w{
+    margin-left: 10px;
+  }
+}
 
 /*-----------------------------------*\
   #RESPONSIVE
@@ -895,8 +976,14 @@ header .container {
 
 /**
  * responsive for larger than 1200px
- */
-
+ */.d{
+  font-size: 2rem;
+ }
+ @media screen and (max-width: 395) {
+  .d {
+      font-size: 1.4rem; /* Reset margin to normal for screens up to 960px */
+  }
+}
 @media (min-width: 1200px) {
 
   :root {
@@ -965,11 +1052,11 @@ header .container {
   .hero :is(.btn-primary, .btn-title, .btn-link) { --fs-4: 17px; }
 
   .hero-banner {
-    margin-top: -40px;
+    margin-top: -60px;
     display: block;
     width: 100%;
     padding-top: 100%;
-    background: url("../images/about-banner-2.png") no-repeat;
+    background: url("../images/hero_mobile_app.png") no-repeat;
     background-size: cover;
     border-radius: 100px;
   }

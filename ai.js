@@ -110,3 +110,39 @@ function toggleDropdown(dropdown) {
       }
     });
   });
+
+
+
+
+  const testimonials = document.querySelectorAll(".grabable");
+
+testimonials.forEach((testimonial) => {
+  let isDragging = false;
+  let initialX, initialY;
+
+  testimonial.addEventListener("mousedown", (event) => {
+    isDragging = true;
+    initialX = event.clientX;
+    initialY = event.clientY;
+    testimonial.style.cursor = "grabbing"; // Change cursor on mousedown
+  });
+
+  document.addEventListener("mousemove", (event) => {
+    if (isDragging) {
+      const deltaX = event.clientX - initialX;
+      const deltaY = event.clientY - initialY;
+
+      testimonial.style.left = `${testimonial.offsetLeft + deltaX}px`;
+      testimonial.style.top = `${testimonial.offsetTop + deltaY}px`;
+
+      initialX = event.clientX;
+      initialY = event.clientY;
+    }
+  });
+
+  document.addEventListener("mouseup", () => {
+    isDragging = false;
+    testimonial.style.cursor = "grab"; // Reset cursor on mouseup
+  });
+});
+
