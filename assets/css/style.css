@@ -615,9 +615,21 @@ header .container {
   background-position: right;
 }
 
+.wor{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
 
-
-
+.darc ion-icon{
+  margin-bottom: 30px;
+  border-bottom: 2px solid hsl(252, 100%, 12%);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  width: 100%; display: flex;
+  font-size: 3.8rem;
+  color: hsl(252, 100%, 12%);
+  font-weight: 700;
+}
 
 /*-----------------------------------*\
   #FOOTER
