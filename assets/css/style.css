@@ -16,6 +16,11 @@
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
+@media screen and (max-width: 893px) {
+  .darc {
+    flex: 1 1 100%;
+  }
+}
 
 :root {
 
@@ -156,11 +161,65 @@ input {
 
 :focus { outline-offset: 4px; }
 
-html {
+ html {
   font-family: var(--ff-josefin);
   scroll-behavior: smooth;
 }
 
+/*
+.choose-us {
+  background-color: hsl(252, 100%, 12%);
+  margin-top: 50px;
+}
+
+.container {
+  margin-top: 60px;
+  margin-bottom: 15px;
+}
+
+.dee {
+  color: #f4f4f4;
+}
+
+.dee b {
+  background: linear-gradient(to right, #00dbde, #fc00ff);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.choose-us p {
+  color: #cecccc;
+  max-width: 50%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.wor {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/*  */
+
+@media screen and (max-width: 1230px) {
+  .darc {
+    width: 48%;
+    height: 500px;
+  }
+
+
+}
+
+@media screen and (max-width: 817px) {
+  .wor {
+    flex-direction: column; /* Stack them vertically */
+  }
+
+  .darc {
+    width: 100%; /* All divs take full width */
+  }
+}
 footer,
  .gem{
   z-index: 2000;
@@ -168,7 +227,7 @@ footer,
   color: var(--white);
 }
 .darc{
-  box-shadow: 0 0 4px #131414;
+  box-shadow: 0 0 8px #131414;
   padding: 20px;
   max-width: 400px;
   height: 300px;
@@ -192,7 +251,9 @@ footer,
 
 
 
-
+html{
+  width: 100%;
+}
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
@@ -686,6 +747,7 @@ header .container {
   background-color: #fc00ff;
 } */
 .wor{
+  gap: 3rem;
   display: flex; justify-content: space-between;justify-content: space-evenly; flex-wrap:initial;text-align: center;align-items: center;
 }
 /* @media (max-width: 500px) {
@@ -791,7 +853,7 @@ header .container {
    * NEWSLETTER
    */
 
-  .newsletter-card { padding: 50px; }
+  .newsletter-card { padding: 47px; }
 
   .card-form { position: relative; }
 
@@ -831,7 +893,9 @@ header .container {
 
 
 
-
+.card__article{
+  background: linear-gradient(to right, #00b1b4, #7c007e);
+}
 /**
  * responsive for larger than 1024px
  */

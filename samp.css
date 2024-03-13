@@ -57,7 +57,7 @@ section.left .contactTitle h2::after{
 	position: absolute;
 	width: 25%;
 	height: 3px;
-	background-color: hsl(346, 100%, 58%);;
+	background: linear-gradient(to right, #03787a, #9b039e);;
 	top: calc(120% - 1px);
 	left: 0;
 }
@@ -79,7 +79,7 @@ section.left .contactInfo{
 .iconGroup .icon{
 	width: 45px;
 	height: 45px;
-	border: 2px solid hsl(346, 100%, 58%);;
+	border: 2px solid rgba(0, 0, 81, 0.874);
 	border-radius: 50%;
 	margin-right: 20px;
 	position: relative;
@@ -115,7 +115,7 @@ section.left .socialMedia{
 	text-align: center;
 	margin-right: 15px;
 	border-radius: 5px;
-	background-color: hsl(346, 100%, 58%);;
+	background: linear-gradient(to right, #03787a, #9b039e);
 	transition: 0.4s;
 }
 .socialMedia a i{
@@ -127,9 +127,9 @@ section.left .socialMedia{
 }
 .socialMedia a:hover{
 	transform: translateY(-5px);
-	background-color: #2e2e2e;
+	background: #2e2e2e;
 	color: hsl(346, 100%, 58%);;
-	border: 1px solid hsl(346, 100%, 58%);;
+	border: 1px solid rgba(0, 0, 72, 0.884);
 }
 .socialMedia a:hover i{
 	color: hsl(346, 100%, 58%);;
@@ -176,7 +176,7 @@ textarea::-webkit-scrollbar-track{
 	border-radius: 15px;
 }
 textarea::-webkit-scrollbar-thumb{
-	background-color: hsl(346, 100%, 58%);;
+	background: linear-gradient(to right, #03787a, #9b039e);
 	border-radius: 15px;
 }
 .inputGroup label{
@@ -200,7 +200,7 @@ textarea::-webkit-scrollbar-thumb{
 .inputGroup button{
 	padding: 8px 16px;
 	font-size: 18px;
-	background-color: hsl(346, 100%, 58%);;
+	background: linear-gradient(to right, #03787a, #9b039e);
 	color: #ddd;
 	border: 1px solid transparent;
 	border-radius: 25px;
@@ -210,16 +210,16 @@ textarea::-webkit-scrollbar-thumb{
 	transition: 0.4s;
 }
 .wolf:hover{
-	color: hsl(346, 100%, 58%);
+	color: rgba(0, 0, 72, 0.884);
 }
 .wolf{
 	color: #ddd;
 }
 .inputGroup button:hover{
-	background-color: #2e2e2e;
-	color: hsl(346, 100%, 58%);;
+	background: #2e2e2e;
+	color: rgba(0, 0, 72, 0.884);;
 	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-	border: 1px solid hsl(346, 100%, 58%);;
+	border: 1px solid rgba(0, 0, 81, 0.874);;
 }
 @media(max-width: 1100px){
 	.messageForm .halfWidth{

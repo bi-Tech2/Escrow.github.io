@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SecureBuy - Your #1 best escrow website</title>
+
+  <!-- 
+    - favicon link
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="ai.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body id="top" style="background-color: #fcfcfce0;">
+
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="active" data-header>
+    <div class="container">
+  
+      <!-- overlay -->
+      <div class="overlay" data-overlay></div>
+  
+      <a href="index.html" class="logo">
+        <b style="background: linear-gradient(to right, #00dbde, #fc00ff); -webkit-background-clip: text; color: transparent;">SecureBuy</b>
+      </a>
+  
+      <button class="nav-toggle-btn" data-nav-toggle-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+  
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+  
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link">Home</a>
+          </li>
+  
+          <li class="navbar-item">
+            <a href="services.html" class="navbar-link">Services</a>
+          </li>
+  
+          <li class="navbar-item dropdown">
+            <a target="_blank" class="navbar-link">Transactions</a>
+            <div class="dropdown-content">
+              <a href="#" class="dropdown-link">Real Estate</a>
+              <a href="#" class="dropdown-link">Online Purchases</a>
+              <a href="#" class="dropdown-link">Business Transactions</a>
+            </div>
+          </li>
+  
+          <li class="navbar-item">
+            <a href="#fees" class="navbar-link">Fees</a>
+          </li>
+  
+          <li class="navbar-item">
+            <a href="#security" class="navbar-link">Security</a>
+          </li>
+  
+          <li class="navbar-item">
+            <a href="#faq" class="navbar-link">FAQs</a>
+          </li>
+  
+          <li class="navbar-item">
+            <a href="ContactSection.html" class="navbar-link">Contact</a>
+          </li>
+  
+        </ul>
+  
+        <div class="navbar-actions">
+          <div class="dropdown">
+            <button class="btn">
+              <ion-icon name="person-circle-outline" style="font-size: 20px;"></ion-icon>
+              <span>Sign up</span>
+            </button>
+            <div class="dropdown-content w">
+              <a href="#" class="dropdown-link">Profile</a>
+              <a href="#" class="dropdown-link">Settings</a>
+              <a href="#" class="dropdown-link">Logout</a>
+            </div>
+          </div>
+  
+        </div>
+      </nav>
+  
+    </div>
+  </header>
+  <style>
+    /* Dropdown styling */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff; /* Background color of the dropdown */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle effect */
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #333; /* Text color of dropdown links */
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0; /* Background color on hover */
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+  </style>  
+
+
+
+
+
+
+
+
+
+      <!-- 
+        - #AI bot
+      -->
+      <div id="aibot-container" class="aibot brew ai active">
+        <div id="chat-icon" onclick="toggleChat()">
+          <img src="hero-img.png" alt="Chat Icon" style="width: 60; height: 60px;" class="ceb">
+        </div>
+        <div id="chat-window" style="display: none;" class="brew">
+          <div id="chat-header" style="display: flex; justify-content: space-between;">
+            <div class="name"><h5>SecureBuyAI</h5></div>
+            <span id="close-chat" onclick="toggleChat()">
+              <ion-icon name="close-outline"></ion-icon>
+            </span>
+          </div>
+          <div id="chat-messages"></div>
+          <div id="chat-input">
+            <input type="text" id="user-input" placeholder="Type your message..." required>
+            <button onclick="sendMessage()" class="weed">Send</button>
+          </div>
+        </div>
+      </div>
+      </div>
+      <!-- 
+        - #AI bot end
+      -->
+
+
+
+
+
+
+
+
+
+
+
+       <!--
+        #SERVICE SECTION
+       -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              <style>
+                .faq {
+                  margin-bottom: 20px;
+                }
+            
+                .question {
+                  background: linear-gradient(to right, #00dbde, #fc00ff);
+                  border-radius: 10px;
+                  padding: 12px;
+                  cursor: pointer;
+                  font-weight: bold;
+                  color: #e1e1e1;
+                }
+            
+                .answer {
+                  display: none;
+                  margin-top: 5px;
+                }
+              </style>
+
+            
+              <section class="faq-section" style="background-color: hsl(252, 100%, 12%); margin-top: 50px; padding: 20px;" id="faq">
+                <div class="container" style="color: #f4f4f4; align-items: center;justify-content: center;text-align: center; margin-top: 90px;">
+                  <h1>Frequently Asked Questions about <b style="background: linear-gradient(to right, #00dbde, #fc00ff); -webkit-background-clip: text; color: transparent;">SecureBuy</b>
+                  </h1>
+            
+                  <!-- FAQ 1 -->
+                  <div class="faq" style="margin-top: 60px;">
+                    <div class="question" onclick="toggleAnswer('answer1')">1. What is SecureBuy?</div>
+                    <div id="answer1" class="answer">SecureBuy is an escrow website that... Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut laboriosam sequi possimus similique iste mollitia dolores sed, quasi quod corporis.</div>
+                  </div>
+            
+                  <!-- FAQ 2 -->
+                  <div class="faq">
+                    <div class="question" onclick="toggleAnswer('answer2')">2. How does SecureBuy work?</div>
+                    <div id="answer2" class="answer">SecureBuy works by... Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quas aspernatur cupiditate a rem nostrum fuga cumque tenetur! Deserunt, hic.</div>
+                  </div>
+            
+                  <!-- FAQ 1 -->
+                  <div class="faq">
+                    <div class="question" onclick="toggleAnswer('answer3')">1. What is SecureBuy?</div>
+                    <div id="answer3" class="answer">SecureBuy is an escrow website that... Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit fugiat expedita cum magnam. Eum aliquid iure in asperiores reprehenderit? Assumenda!</div>
+                  </div>
+            
+                  <!-- FAQ 2 -->
+                  <div class="faq">
+                    <div class="question" onclick="toggleAnswer('answer4')">2. How does SecureBuy work?</div>
+                    <div id="answer4" class="answer">SecureBuy works by... Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod vitae quo enim officiis fuga dolore possimus quia soluta, molestias adipisci.</div>
+                  </div>
+
+                  <!-- FAQ 1 -->
+                  <div class="faq">
+                    <div class="question" onclick="toggleAnswer('answer5')">1. What is SecureBuy?</div>
+                    <div id="answer5" class="answer">SecureBuy is an escrow website that... Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda molestiae est quod sunt labore ad explicabo aspernatur ratione sed iure.</div>
+                  </div>
+            
+                  <!-- FAQ 2 -->
+                  <div class="faq">
+                    <div class="question" onclick="toggleAnswer('answer6')">2. How does SecureBuy work?</div>
+                    <div id="answer6" class="answer">SecureBuy works by... Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ducimus doloremque ipsam sequi voluptatum, quis ex harum quod autem. Velit?</div>
+                  </div>
+            
+                </div>
+              </section>
+            
+              <script>
+                function toggleAnswer(answerId) {
+                  var answer = document.getElementById(answerId);
+                  if (answer.style.display === "none" || answer.style.display === "") {
+                    answer.style.display = "block";
+                  } else {
+                    answer.style.display = "none";
+                  }
+                }
+              </script>
+            
+
+
+      <!-- 
+        - #NEWSLETTER
+      -->
+
+      <section class="newsletter container">
+        <div class="newsletter-card">
+
+          <div class="card-content">
+            <h3 class="h3 card-title">Sign Up For Our Newsletter. It’s Free!</h3>
+
+            <p class="card-text">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit tincidunt todeiy felis malesuada mollis purus id
+              sit in aliquet.
+            </p>
+          </div>
+
+          <form action="" class="card-form" data-form>
+            <input type="email" name="email_address" placeholder="Your Email Address" required class="input-field"
+              data-input>
+
+            <button type="submit" class="btn btn-primary" disabled data-submit>Subscribe</button>
+          </form>
+
+        </div>
+      </section>
+
+
+  </main>
+
+
+
+
+
+<!-- 
+  - #FOOTER
+-->
+
+<footer>
+
+  <div class="footer-top">
+    <div class="container">
+
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <b style="background: linear-gradient(to right, #00dbde, #fc00ff); -webkit-background-clip: text; color: transparent;">SecureBuy</b>
+        </a>
+
+        <p class="footer-text">
+          Your trusted partner for secure transactions. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tincidunt in felis malesuada, mollis purus id, sit in aliquet lectus eget morbi dui felis malesuada.
+        </p>
+      </div>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="footer-link-title">Navigation</p>
+        </li>
+      
+        <li>
+          <a href="index.html" class="footer-link active">Home</a>
+        </li>
+      
+        <li>
+          <a href="about.html" class="footer-link">About</a>
+        </li>
+      
+        <li>
+          <a href="ContactSection.html" class="footer-link">Contact</a>
+        </li>
+      
+        <li>
+          <a href="#get-started" class="footer-link">Get Started</a>
+        </li>
+      
+        <li>
+          <a href="#transactions" class="footer-link">Transactions</a>
+        </li>
+      
+        <li>
+          <a href="#funds" class="footer-link">Funds</a>
+        </li>
+
+      </ul>
+<!-- Additional Links -->
+<ul class="footer-list">
+
+  <li>
+    <p class="footer-link-title">Useful Links</p>
+  </li>
+
+  <li>
+    <a href="privacy.html" class="footer-link">Privacy Policy</a>
+  </li>
+
+  <li>
+    <a href="terms.html" class="footer-link">Terms of Service</a>
+  </li>
+
+  <li>
+    <a href="refund.html" class="footer-link">Refund Policy</a>
+  </li>
+
+  <!-- <li>
+    <a href="disclaimer.html" class="footer-link">Disclaimer</a>
+  </li> -->
+
+  <li>
+    <a href="#faq" class="footer-link">FAQs</a>
+  </li>
+
+  <li>
+    <a href="support.html" class="footer-link">Support Center</a>
+  </li>
+
+  <li>
+    <a href="helpdesk.html" class="footer-link">Help Desk</a>
+  </li>
+
+</ul>
+
+<!-- Social Links -->
+<ul class="footer-list">
+
+  <li>
+    <p class="footer-link-title">Connect With Us</p>
+  </li>
+
+  <li>
+    <a href="customer-service.html" class="footer-link">Customer Service</a>
+  </li>
+
+  <li>
+    <a href="linkedin.com/company/securebuy" class="footer-link">LinkedIn</a>
+  </li>
+
+  <li>
+    <a href="youtube.com/securebuy" class="footer-link">YouTube</a>
+  </li>
+
+  <!-- <li>
+    <a href="pinterest.com/securebuy" class="footer-link">Pinterest</a>
+  </li> -->
+
+  <li>
+    <a href="partner-program.html" class="footer-link">Partner Program</a>
+  </li>
+
+  <li>
+    <a href="affiliate.html" class="footer-link">Become an Affiliate</a>
+  </li>
+
+  <li>
+    <a href="subscribe.html" class="footer-link">Subscribe to Newsletter</a>
+  </li>
+
+</ul>
+
+      
+
+      <div class="social-list-box">
+
+        <p class="social-title">Follow Us On:</p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="https://www.facebook.com/securebuy" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://twitter.com/securebuy" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.instagram.com/securebuy" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://soundcloud.com/securebuy" class="social-link">
+              <ion-icon name="logo-soundcloud"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-apple"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p class="copyright">
+        &copy; 2024 <a href="https://bi-tech2.github.io/JoshDickson.github.io/">SecureBuy</a>. All Rights Reserved
+      </p>
+    </div>
+  </div>
+
+</footer>
+
+
+
+
+
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top" data-go-top>
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="ai.js"></script>
+
+</body>
+
+</html>
