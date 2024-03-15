@@ -10,12 +10,29 @@
  */
 
 
+ ol li {
+  min-height: 150px;
+}
 
+.g {
+  column-count: 2;
+  column-gap: 40px;
+  column-rule-style: solid;
+  column-rule-color: rgba(0, 0, 0, 0.591);
+}
 
+@media screen and (max-width: 707px) {
+  .g {
+    column-count: initial;
+    column-gap: initial;
+    column-rule-style: initial;
+    column-rule-color: initial;
+  }
+  ol li {
+    min-height: initial;
+  }
+}
 
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
 @media screen and (max-width: 893px) {
   .darc {
     flex: 1 1 100%;
@@ -547,7 +564,7 @@ header .container {
 .podcast-card .card-title {
   display: inline;
   padding: 3px 0;
-  background: var(--gradient);
+  background: conic-gradient(red, yellow, green, blue, black);
   background-position: 0 95%;
   background-repeat: no-repeat;
   background-size: 0 2px;

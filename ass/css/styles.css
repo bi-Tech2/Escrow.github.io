@@ -4,7 +4,10 @@
 .card__container {
   padding-block: 5rem;
 }
-
+.lol{
+  list-style-type: disc;
+  margin-left: 1rem;
+}
 .card__content {
   margin-inline: 1.75rem;
   border-radius: 1.25rem;
